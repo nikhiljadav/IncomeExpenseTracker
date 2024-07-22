@@ -1,2 +1,1 @@
-"# decentralized-app" 
-"# ExpenseTracker" 
+Income and Expense tracker created using React, Node.js, and Express. This project uses MongoDB as the back-end database to store user data. Using packages like styled-components, and Chart.js, this website allows users to see their data displayed with vibrance and visualization.
