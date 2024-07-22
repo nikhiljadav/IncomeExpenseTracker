@@ -36,6 +36,8 @@ export const GlobalProvider = ({children}) => {
         let totalIncome = 0;
         incomes.forEach((income) =>{
             totalIncome += income.amount
+            totalIncome = Math.round(totalIncome * 100) / 100
+
         })
         return totalIncome;
     }
@@ -63,13 +65,15 @@ export const GlobalProvider = ({children}) => {
         let totalIncome = 0;
         expenses.forEach((income) =>{
             totalIncome += income.amount
+            totalIncome = Math.round(totalIncome * 100) / 100
+
         })
         return totalIncome;
     }
 
 
     const totalBalance = () => {
-        return totalIncome()-totalExpenses()
+        return Math.round((totalIncome()-totalExpenses()) * 100 / 100)
     }
     const transactionHistory = () => {
         const history = [...incomes, ...expenses]
